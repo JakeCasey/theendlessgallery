@@ -1,0 +1,110 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 21.01.2019 09:52:31
+
+newmtl bricks_1
+	Ns 50.0000
+	Ni 1.6000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5000 0.5000 0.5000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka ./bricks_01.jpg
+	map_Kd ./bricks_01.jpg
+	map_bump ./bricks_01.jpg
+	bump ./bricks_01.jpg
+
+newmtl Brick_white
+	Ns 50.0000
+	Ni 1.6000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5000 0.5000 0.5000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka ./Briks_white.jpg
+	map_Kd ./Briks_white.jpg
+	map_bump ./Briks_white.jpg
+	bump ./Briks_white.jpg
+
+newmtl black_metall
+	Ns 50.0000
+	Ni 1.6000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0902 0.0902 0.0902
+	Ks 0.5040 0.5040 0.5040
+	Ke 0.0000 0.0000 0.0000
+
+newmtl concrete
+	Ns 50.0000
+	Ni 1.6000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5000 0.5000 0.5000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka ./concrete.jpg
+	map_Kd ./concrete.jpg
+	map_bump ./concrete.jpg
+	bump ./concrete.jpg
+
+newmtl concrete_partition
+	Ns 50.0000
+	Ni 1.6000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5000 0.5000 0.5000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka ./concrete_wall.jpg
+	map_Kd ./concrete_wall.jpg
+	map_bump ./concrete_wall.jpg
+	bump ./concrete_wall.jpg
+
+newmtl gas_concrete
+	Ns 50.0000
+	Ni 1.6000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5000 0.5000 0.5000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka ./gas_concrete.jpg
+	map_Kd ./gas_concrete.jpg
+	map_bump ./gas_concrete.jpg
+	bump ./gas_concrete.jpg
+
+newmtl bricks_2
+	Ns 50.0000
+	Ni 1.6000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5000 0.5000 0.5000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka ./bricks_02.jpg
+	map_Kd ./bricks_02.jpg
+	map_bump ./bricks_02.jpg
+	bump ./bricks_02.jpg

@@ -1,0 +1,145 @@
+<html></html>
+  <head>
+    <title>The Endless Gallery</title>
+    <!-- <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script> -->
+    
+    <!-- <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script> -->
+
+    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+    <!-- recording -->
+    <!-- <script src="https://unpkg.com/aframe-motion-capture-components/dist/aframe-motion-capture-components.min.js"></script> -->
+    <script src="./js/aframe-motion-capture-components.js"></script>
+
+    <script src="https://unpkg.com/aframe-html-shader@0.2.0/dist/aframe-html-shader.min.js"></script>
+    <script src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/webvr-polyfill@latest/build/webvr-polyfill.js"></script>
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v6.0.1/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/super-hands@3.0.0/dist/super-hands.min.js"></script>
+    <script src="//cdn.jsdelivr.net/gh/donmccurdy/aframe-physics-system@v3.2.0/dist/aframe-physics-system.min.js"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="dirigible.js"></script>
+    <link rel="stylesheet" href="dirigible.css" />
+  </head>
+  <body>
+    <img id="wasd" src="./assets/WASD.png" />
+    <a-scene id="the_scene" 
+        debug
+        physics
+        avatar-replayer="loop: true;"
+    >
+
+    <!-- <a-scene physics renderer="gammaOutput: true" id="the_scene" > -->
+      <!-- asset loading -->
+      <a-assets>
+        <img
+          id="groundTexture"
+          src="https://cdn.aframe.io/a-painter/images/floor.jpg"
+        />
+
+        <img
+          id="cypress"
+          src="./assets/art/cypresses.jpg"
+        />
+        <img
+        id="concreteOCC"
+        src="./assets/Concrete_009_SD/Concrete_009_OCC.jpg" />
+        <img
+        id="concreteCOLOR"
+        src="./assets/Concrete_009_SD/Concrete_009_COLOR.jpg" />
+        <img
+        id="concreteDISP"
+        src="./assets/Concrete_009_SD/Concrete_009_DISP.png" />
+
+        <img
+        id="concreteNORM"
+        src="./assets/Concrete_009_SD/Concrete_009_NORM.jpg" />
+
+        <img
+        id="concreteROUGH"
+        src="./assets/Concrete_009_SD/Concrete_009_ROUGH.jpg" />
+        <a-asset-item id="crate-obj" src="./assets/OBJ/model.obj"></a-asset-item>
+        <a-asset-item id="crate-mtl" src="./assets/OBJ/construction blocks.mtl"></a-asset-item>
+
+      </a-assets>
+
+
+      <a-obj-model 
+      wall
+      position="8 0 -5"
+      scale="1 1 1"
+      src="#crate-obj" mtl="#crate-mtl">
+    </a-obj-model>
+
+      <a-obj-model 
+      wall
+      position="1 0 -5"
+      scale="1 1 1"
+      src="#crate-obj" mtl="#crate-mtl">
+
+    </a-obj-model>
+
+      <a-box hoverable grabbable stretchable draggable dropppable color="blue" position="0 0 -1"></a-box>
+
+
+      <a-hall path="1 1 1, 2 1 1"  width=".2"></a-hall>
+
+      <a-hall path="10 1 1, 20 1 1"  width=".2"></a-hall>
+      <a-hall path="1 1 1, 1 1 2" width=".2"></a-hall>
+
+      <!-- floor -->
+      <a-grid static-body></a-grid>
+
+      <a-entity
+       id="cameraRig">
+        <!-- Camera and Cursor. -->
+        <!-- <a-camera look-controls="false" id="head"> -->
+        <!-- </a-camera> -->
+        <!--TODO: if you remove look controls from camera component it no longer has glitchy view -->
+        <a-entity camera   
+        wasd-controls
+        look-controls
+        position="0 1.6 0"
+        id="head"></a-entity>
+
+        <!-- music! -->
+
+        <!-- Controllers. -->
+        <a-entity
+          id="rightHand"
+          super-hands
+          hand-controls="right"
+          sphere-collider="objects: a-box"
+          laser-controls="hand: right"
+          line="color: white;"
+        ></a-entity>
+      
+        <a-entity
+          id="leftHand"
+          super-hands
+          sphere-collider="objects: a-box"
+          hand-controls="left"
+          teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head;button: trigger; ground: #groundTexture; hitCylinderColor: #c52126; curveHitColor: #c52126; curveMissColor: #333333; curveLineWidth: 0.01;"
+        >
+
+      </a-entity>
+      </a-entity>
+    </a-scene>
+
+    <!-- loading screen -->
+
+    <div id="loading_screen" class="loading_background">
+      <div class="wrap">
+        <div class="loading">
+          <div class="bounceball"></div>
+          <div class="text">NOW LOADING</div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
